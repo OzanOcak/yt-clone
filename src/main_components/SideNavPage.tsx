@@ -24,7 +24,7 @@ const SideNavPage = ({ openSide, setOpenSide }: Props) => {
   const [more, setMore] = useState<boolean>(false);
   return (
     <div
-      className={`absolute flex   md:w-full h-[calc(100%_+_36px)] text-white z-10`}
+      className={`fixed flex  md:w-full h-[calc(100%_+_36px)] text-white z-10`}
     >
       <div className=" flex flex-1 flex-col h-screen md:h-full w-[240px]  bg-black mb-4  py-3  ">
         <div className="flex fixed mb-12 z-10">

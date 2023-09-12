@@ -26,7 +26,7 @@ const SideNavPage = ({ openSide, setOpenSide }: Props) => {
     <div
       className={`absolute flex  w-full h-[calc(100%_+_36px)] text-white z-10`}
     >
-      <div className=" hidden md:flex flex-col h-full w-[240px]  bg-black mb-4  py-3  ">
+      <div className=" flex flex-col h-full w-[240px]  bg-black mb-4  py-3  ">
         <div className="flex fixed mb-12 z-10">
           <div className="px-6 " onClick={() => setOpenSide(!openSide)}>
             <HoverIcon children={<SideBarIcon />} />

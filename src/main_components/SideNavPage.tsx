@@ -24,9 +24,9 @@ const SideNavPage = ({ openSide, setOpenSide }: Props) => {
   const [more, setMore] = useState<boolean>(false);
   return (
     <div
-      className={`absolute flex  w-full h-[calc(100%_+_36px)] text-white z-10`}
+      className={`absolute flex   md:w-full h-[calc(100%_+_36px)] text-white z-10`}
     >
-      <div className=" flex flex-col h-full w-[240px]  bg-black mb-4  py-3  ">
+      <div className=" flex flex-1 flex-col h-screen md:h-full w-[240px]  bg-black mb-4  py-3  ">
         <div className="flex fixed mb-12 z-10">
           <div className="px-6 " onClick={() => setOpenSide(!openSide)}>
             <HoverIcon children={<SideBarIcon />} />
@@ -35,7 +35,7 @@ const SideNavPage = ({ openSide, setOpenSide }: Props) => {
             <YoutubeIcon />
           </div>
         </div>
-        <div className="mt-16">
+        <div className="flex flex-col flex-1 mt-16">
           <SideNavIcon children={<Home />} text="Home" />
           <SideNavIcon children={<Shorts />} text="Shorts" />
           <SideNavIcon children={<Subcriptions />} text="Subcriptions" />
@@ -45,9 +45,9 @@ const SideNavPage = ({ openSide, setOpenSide }: Props) => {
           <SideNavIcon children={<YourVideos />} text="Your Videos" />
           <SideNavIcon children={<WatchLater />} text="Watch Later" />
           <SideNavIcon children={<LikedVideos />} text="Liked Videos" />
-          {!more && <SideNavIcon children={<MyList />} text="CPU Design" />}
-          {!more && <SideNavIcon children={<MyList />} text="React" />}
-          {more ? (
+          {more && <SideNavIcon children={<MyList />} text="CPU Design" />}
+          {more && <SideNavIcon children={<MyList />} text="React" />}
+          {!more ? (
             <div onClick={() => setMore(!more)}>
               <SideNavIcon children={<MoreLibrary />} text="More Library" />
             </div>

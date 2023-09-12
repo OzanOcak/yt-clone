@@ -8,7 +8,7 @@ const MainPage = () => {
         <div className="mt-12">
           <CategoryBar />
         </div>
-        <div className="flex flex-row flex-wrap  p-2 sm:pl-16">
+        <div className="flex flex-row flex-wrap justify-center md:justify-start  p-2 sm:pl-16">
           <YoutubeEmbed embedId="u8vMu7viCm8?si=TIs1fadkODzmw6Vn" />
           <YoutubeEmbed embedId="u8vMu7viCm8?si=TIs1fadkODzmw6Vn" />
           <YoutubeEmbed embedId="u8vMu7viCm8?si=TIs1fadkODzmw6Vn" />
